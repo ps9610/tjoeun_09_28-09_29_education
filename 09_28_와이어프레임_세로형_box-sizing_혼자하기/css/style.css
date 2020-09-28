@@ -21,7 +21,7 @@
 #wrap #leftBox #header .nav-wrap #nav > ul > li > a:hover {background:#000;color:#fff;}
 #wrap #leftBox #header .nav-wrap #nav > ul > li > a:focus {background:#000;color:#fff;}
 
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub {display:none;width:100%;background:#aaa;position:absolute;top:0;left:100%;border:1px solid #000;}
+#wrap #leftBox #header .nav-wrap #nav > ul > li .sub {display:none;width:100%;background:#aaa;position:absolute;top:0;left:100%;border:1px solid #000;padding-bottom:140px;}
 #wrap #leftBox #header .nav-wrap #nav > ul > li:hover .sub {display:block;}
 #wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul {width:100%;}
 #wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul > li {width:100%;}
