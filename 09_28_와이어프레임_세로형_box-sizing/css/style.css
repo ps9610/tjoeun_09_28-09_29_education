@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#wrap {width:1000px;height:650px;border:1px solid #ccc;box-sizing:border-box;margin:0 auto;}
+
+#wrap #leftBox {float:left;width:199px;height:648px;border-right:1px solid #ccc;box-sizing:border-box;} /* 코드는는 컨텐츠처럼 입력 후 box-sizing:border-box로 해주기 */
+
+#wrap #leftBox #header {width:100%;height:100%;}
+#wrap #leftBox #header .logo-wrap {width:100%;height:99px;border-bottom:1px dotted #ccc;box-sizing:border-box;}
+#wrap #leftBox #header .nav-wrap {width:100%;height:549px;}
+
+#wrap #rightBox {float:left;width:799px;height:648px;}
+
+#wrap #rightBox #main{width:100%;height:549px;border-bottom:1px solid #ccc;box-sizing:border-box;}
+
+#wrap #rightBox #footer{width:100%;height:99px;}

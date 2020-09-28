@@ -43,9 +43,26 @@
     <![endif]-->
  
 </head>
-<body>
-<div id="wrap">
+<body>                 <!-- 1단계전체박스 2단계시멘틱태그 3단계각시멘트태그에서구분 -->
+<div id="wrap" class="fixedclear">
+    <div id="leftBox"> <!-- rightBox랑 구분되게하려고 그냥 boxing한거임 -->
+        <header id="header">
+            <div class="logo-wrap"> <!-- class = snake-case -->
 
-</div> <!-- 큰 단위묶음은 id를 씁니다. /  id는 중복으로절대사용안됨 / id는 카멜표기법 /class는 id보다 작은단위 /  -->
+            </div>
+            <div class="nav-wrap">
+
+            </div>
+        </header>
+    </div>
+    <div id="rightBox">
+        <main id="main">
+
+        </main>
+        <footer id="footer">
+
+        </footer>
+    </div>             <!-- div-그냥박스 / header, main, footer- 시멘틱태그 -->
+</div>
 </body>
 </html>

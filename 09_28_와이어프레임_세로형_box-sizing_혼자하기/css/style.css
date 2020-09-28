@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#wrap {width:1000px;height:650px;margin:0 auto;border:1px solid #ccc;box-sizing:border-box;}
+
+#wrap #leftBox {float:left;width:199px;height:648px;}
+#wrap #leftBox #header {width:100%;height:100%;}
+#wrap #leftBox #header .logo-wrap {width:100%;height:99px;}
+#wrap #leftBox #header .nav-wrap {width:100%;height:549px;border-top:1px solid #ccc;box-sizing:border-box;}
+
+
+
+#wrap #rightBox {float:left;width:799px;height:648px;border-left:1px solid #ccc;box-sizing:border-box;}
+#wrap #rightBox #main {width:100%;height:548px;border-bottom:1px solid #ccc;}
+#wrap #rightBox #footer {width:100%;height:99px;}
