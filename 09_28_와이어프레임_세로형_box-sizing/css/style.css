@@ -26,6 +26,8 @@
 
 /*서브메뉴*/
 #wrap #leftBox #header .nav-wrap #nav > ul > li .sub {display:none;background:#eee;position:absolute;top:-30px;left:100%;width:100%;padding-bottom:100px;border:1px solid #ccc;} /* absolute는 relative없으면 무조건 body가 부모 */
+/* 어떻게 absolute가 많은 relative 중에 우리가 원하는 곳을 찾아갈까?
+우리가 원하는 곳을 relative로 정해주면 됨!! absolute=자식이기 때문에 그 위의 부모(할아버지X)에 relative를 주면 됨 */
 #wrap #leftBox #header .nav-wrap #nav > ul > li:hover .sub {display:block;} /* li에 hover를 할 때 .sub를 보여달라 */
 #wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul {width:100%;}
 #wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul > li {width:100%;}
