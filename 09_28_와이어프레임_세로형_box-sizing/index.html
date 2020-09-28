@@ -51,16 +51,36 @@
 
             </div>
             <div class="nav-wrap">
-
+                <nav id="nav"> <!-- 시멘틱태그는 무조건 id쓰자 (우리약속) -->
+                    <ul>
+                        <li><a href="#" class="main-btn" title="MENU-1">MENU-1</a></li> <!-- #:임시링크 -->
+                        <li><a href="#" class="main-btn" title="MENU-2">MENU-2</a></li> <!-- a링크는 무조건 html 사이트 들어가서 손가락 확인 -> 높이,가운데정렬하러가기+BLOCK처리 -->
+                        <li><a href="#" class="main-btn" title="MENU-3">MENU-3</a></li>
+                        <li><a href="#" class="main-btn" title="MENU-4">MENU-4</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
     </div>
     <div id="rightBox">
         <main id="main">
+            <section id="section1">
 
+            </section>
+            <section id="section2">
+                <ul class="fixedclear">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
         </main>
-        <footer id="footer">
-
+        <footer id="footer" class="fixedclear">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </footer>
     </div>             <!-- div-그냥박스 / header, main, footer- 시멘틱태그 -->
 </div>
