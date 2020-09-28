@@ -1,52 +1,48 @@
-@charset "UTF-8";
+@charset "UTF-8";  /* 스킵-wrap 서로 형제니까 제일 먼저설정 */
 
-
-/*skip*/
-#skip {font-size:0} /* 빈칸 놔두기 그래서 ul부터 폰트 0으로 해줌 */
+/* 스킵메뉴 */
+#skip {z-index:2;/*스킵하고 wrap하고 두 형제, 중에 제일 위에 보여야되니까 2번*/position:absolute;top:0;left:0;width:100%;font-size:0;} /*지금 헤더가 fixed라, 벽돌처럼쌓아지는 relative가되면 안되고, 앞/뒤가 설정되는 absolute로 해서 겹치게해야됨*/
 #skip > li {width:100%;}
-#skip > li > a {display:block;line-height:0;font-size:0;color:#fff;background:#000;text-align:center;}
+#skip > li > a {display:block;line-height:0;font-size:0;background:#000;color:#fff;text-align:center;}
 #skip > li > a:focus {line-height:50px;font-size:20px;}
-/* wrap이 100%넓이면 밑에다가 바로 skip쓰는데 여기는 1000px이라 위에 씀 */
 
-#wrap {width:1000px;height:650px;border:1px solid #ccc;box-sizing:border-box;margin:0 auto;}
-
-#wrap #leftBox {z-index:3;position:relative;float:left;width:199px;height:648px;border-right:1px solid #ccc;box-sizing:border-box;} /* 코드는 컨텐츠처럼 입력 후 box-sizing:border-box로 해주기 */
-
-#wrap #leftBox #header {width:100%;height:100%;} /* 안에 내용물없으면 높이정해줘야됨 */
-#wrap #leftBox #header .logo-wrap {width:100%;height:99px;border-bottom:1px dotted #ccc;box-sizing:border-box;}
-#wrap #leftBox #header .nav-wrap {width:100%;height:549px;}
-#wrap #leftBox #header .nav-wrap #nav {width:100%;}
-#wrap #leftBox #header .nav-wrap #nav > ul {margin: 15px 15px 0 15px;border:1px solid #ddd;border-bottom:0;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li {position:relative;border-bottom:1px solid #ddd;}
-/* 네비에서 첫번째로 건드릴것 = a */
-#wrap #leftBox #header .nav-wrap #nav > ul > li > a {display:block;line-height:45px;background:#fff;color:#000;font-size:14px;text-align:center;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li > a:hover {background:#000;color:#fff;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li > a:focus/*접근성*/ {background:#000;color:#fff;}
-/* 안에 내용물있으면 높이정할필요없음 */
-
-/*서브메뉴*/
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub {display:none;background:#eee;position:absolute;top:-30px;left:100%;width:100%;padding-bottom:100px;border:1px solid #ccc;} /* absolute는 relative없으면 무조건 body가 부모 */
-#wrap #leftBox #header .nav-wrap #nav > ul > li:hover .sub {display:block;} /* li에 hover를 할 때 .sub를 보여달라 */
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul {width:100%;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul > li {width:100%;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul > li > a {display:block;line-height:35px;text-align:center;font-size:13px;color:#555;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul > li > a:hover {background:#000;color:#fff;}
-#wrap #leftBox #header .nav-wrap #nav > ul > li .sub > ul > li > a:focus {background:#000;color:#fff;}
+#wrap {z-index:1;position:relative;/*block의 의미*/} /* 포지션 앱솔루트 relative는 꼭 top, left값 들어가야됨 */
+/* 헤더영역 */
+#wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:120px;border-top:2px solid #000;border-bottom:1px solid #e5e5e5;background:#f6f5ef;}
 
 
-#wrap #rightBox {z-index:2;position:relative;float:left;width:799px;height:648px;}
 
-#wrap #rightBox #main {width:100%;height:549px;border-bottom:1px solid #ccc;box-sizing:border-box;}
-#wrap #rightBox #main #section1 {width:100%;height:349px;border-bottom:1px solid #ccc;box-sizing:border-box;}
-#wrap #rightBox #main #section2 {width:100%;height:199px;}
-#wrap #rightBox #main #section2 > ul {width:100%;height:100%;}
-#wrap #rightBox #main #section2 > ul > li {float:left;width:33.33333%;height:100%;}
-#wrap #rightBox #main #section2 > ul > li:nth-child(1),
-#wrap #rightBox #main #section2 > ul > li:nth-child(2) {border-right:1px dotted #ccc;box-sizing:border-box;} /* 위 아래 코드가 똑같으면 comma(,)를 붙여서 그룹으로 태그걸기 */
+/*메인영역*/
+#wrap #main {z-index:2;position:relative;}
+/* 섹션1영역 */
+#wrap #main #section1 {width:100%;height:646px;background:url(../img/section1.jpg) no-repeat 50% 0;background-size:100% 100%;} 
+/* background:url(../img/section1.jpg) no-repeat 50%(position:center라는 뜻) 0 (position:top이라는 뜻);background-size:100%width 100%/* height */;} 새로배운내용 : background no-repeat:반복하지않겠다*/
 
-#wrap #rightBox #footer {width:100%;height:99px;}
-#wrap #rightBox #footer > ul {width:100%;height:100%;}
-#wrap #rightBox #footer > ul > li {float:left;height:100%;}
-#wrap #rightBox #footer > ul > li:nth-child(1) {width:180px;height:100%;border-right:1px dotted #ccc;box-sizing:border-box;} /* :nth-child()랑 :nth-of-type()(갯수셀때 쓴다) 는 다름(차후에 css 부교재에서 설명) */
-#wrap #rightBox #footer > ul > li:nth-child(2) {width:439px;height:100%;border-right:1px dotted #ccc;box-sizing:border-box;}
-#wrap #rightBox #footer > ul > li:nth-child(3) {width:180px;height:100%;}
+/* 섹션2영역 */
+#wrap #main #section2 {}
+
+/* 섹션3영역 */
+#wrap #main #section3 {}
+
+/* 섹션4영역 */
+#wrap #main #section4 {}
+
+/* 섹션5영역 */
+#wrap #main #section5 {}
+
+/* 섹션6영역 */
+#wrap #main #section6 {}
+
+/* 섹션7영역 */
+#wrap #main #section7 {}
+
+/* 섹션8영역 */
+#wrap #main #section8 {}
+
+/* 섹션9영역 */
+#wrap #main #section9 {}
+
+
+
+/* 푸터영역 */
+#wrap #footer {z-index:1;position:relative;width:100%;height:678px;padding:32px 0 35px 0;background:#2c2a29;}
