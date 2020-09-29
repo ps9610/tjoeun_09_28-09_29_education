@@ -1,0 +1,23 @@
+1. 밴더프리픽스가 중요한 개념이다.
+
+[백그라운드 옵션 설명]
+
+////// 배경 색상이미지 옵션 //////
+background:컬러(#fff) 이미지(url(../img/이미지)) 반복(repeat,no-repeat repeat-x repeat-y) 포지션 (x y) 스크롤/고정(attachment scroll fixed)
+
+// 한줄로 코딩 = 약식코딩(권장)//
+background:url(../img/section1.jpg) no-repeat 50% 0;scroll;background-size:100% 100%;
+
+// 속성별로 코딩(6개) 수정할 때 주로 이렇게 사용 //
+background-color:#fff;
+background-image:url(../img/section1.jpg);
+background-repeat:no-repeat;
+background-position:50% 0;
+background-attachment:scroll;
+background-size:100% 100%;
+
+
+/* background:#color;이미지url(../img/section1.jpg);반복no-repeat;
+포지션 50%(position-x:center라는 뜻) 0(position:top이라는 뜻) 포지션x수평(0:left 50%:center 100%:right) y수직고정(0:top 50%:center 100%:bottom)
+attachment 고정(fixed)/스크롤(scroll:보통은 스크롤로 설정이 되어서 써도 그만 안 써도 그만);
+background-size:100%width 100%/* height;background repeat (repeat-x:가로로반복 / -y:세로로반복 / no-repeat:반복안함) */

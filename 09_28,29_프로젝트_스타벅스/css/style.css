@@ -1,50 +1,52 @@
-@charset "UTF-8";  /* skip-wrap 서로 형제니까 제일 먼저설정 */
+@charset "UTF-8";  /* 스킵-wrap 서로 형제니까 제일 먼저설정////컨텐츠박스개념으로 할거임 */
 
-/* 스킵메뉴 */
-#skip {z-index:2;/*skip, wrap 두 형제 중에 제일 위에 보여야되니까 2번*/position:absolute;top:0;left:0;width:100%;font-size:0;} /*지금 헤더가 fixed라, 벽돌처럼쌓아지는 relative가되면 안되고, 앞/뒤가 설정되는 absolute로 해서 겹치게해야됨*/
+/* 스킵메뉴 : 앞으로모든스킵은 wrap앞에다가 작업 */
+#skip {z-index:2;/*스킵하고 wrap하고 두 형제, 중에 제일 위에 보여야되니까 2번*/position:absolute;top:0;left:0;width:100%;font-size:0;} /*지금 헤더가 fixed라, 벽돌처럼쌓아지는 relative가되면 안되고, 앞/뒤가 설정되는 absolute로 해서 겹치게해야됨*/
 #skip > li {width:100%;}
 #skip > li > a {display:block;line-height:0;font-size:0;background:#000;color:#fff;text-align:center;}
 #skip > li > a:focus {line-height:50px;font-size:20px;}
 
-
-/* 웹 문서 전체 랩핑 박스블럭 */
 #wrap {z-index:1;position:relative;/*block의 의미*/} /* 포지션 앱솔루트 relative는 꼭 top, left값 들어가야됨 */
 /* 헤더영역 */
 #wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:120px;border-top:2px solid #000;border-bottom:1px solid #e5e5e5;background:#f6f5ef;}
-/* position중에 relative absolute는 scroll기능, fixed만 고정기능 */
 
+/* 웹문서 전체랩핑 박스블럭 */
 
 /*메인영역*/
-#wrap #main {z-index:2;position:relative;}
+#wrap #main {z-index:2;position:relative;margin-top:123px;}
+
 /* 섹션1영역 */
-#wrap #main #section1 {width:100%;height:646px;background:url(../img/section1.jpg) no-repeat 50% 0;background-size:100% 100%;} 
-/* background:url(이미지 url 넣기);no-repeat:반복하지않겠다;50%(position:center라는 뜻);0(position:top이라는 뜻);background-size:100% 100%(width:100%면 아무리 줄였다늘렸다해도 화면에 꽉참 height) */
+#wrap #main #section1 {width:100%;height:646px;background:url(../img/section1.jpg) no-repeat 50% 0;background-size:100% 100%;}/*cover(주로 사진일때씀) : 넓이가 넓어질수록 높이도 높아져서 이 홈페이지엔 100% 100%가 맞음 (본래의 높이를 넘어가면 안되니까) 
 
 /* 섹션2영역 */
-#wrap #main #section2 {}
+#wrap #main #section2 {width:100%;height:62px;}
+#wrap #main #section2 > ul {width:100%;height:62px;}
+#wrap #main #section2 > ul > li {width:50%;float:left;height:62px;}
+#wrap #main #section2 > ul > li:nth-child(1) {background:#000;}
+#wrap #main #section2 > ul > li:nth-child(2) {background:#f6f5ef;}
 
 /* 섹션3영역 */
-#wrap #main #section3 {}
+#wrap #main #section3 {display:none;width:100%;height:658px;background:#f6f5ef;}
 
 /* 섹션4영역 */
-#wrap #main #section4 {}
+#wrap #main #section4 {width:100%;height:167px;padding:30px 0 40px 0;background:#1e3932;} /*원래 패딩은 자기자신의 높이에 포함됨*/
 
 /* 섹션5영역 */
-#wrap #main #section5 {}
+#wrap #main #section5 {width:100%;height:573px;background: url(../img/section5.jpg) no-repeat 50% 0;background-size:cover;}
 
 /* 섹션6영역 */
-#wrap #main #section6 {}
+#wrap #main #section6 {width:100%;height:400px;background:#f4eed9;}
 
 /* 섹션7영역 */
-#wrap #main #section7 {}
+#wrap #main #section7 {width:100%;height:800px;background:url(../img/section7.jpg) no-repeat 50% 0 fixed;background-size:cover;}
 
 /* 섹션8영역 */
-#wrap #main #section8 {}
+#wrap #main #section8 {width:100%;height:695px;background: #fff;}
 
 /* 섹션9영역 */
-#wrap #main #section9 {}
+#wrap #main #section9 {width:100%;height:400px;background:url(../img/section9.jpg) no-repeat 50% 0;background-size:100% 100%;}
 
 
 
 /* 푸터영역 */
-#wrap #footer {z-index:1;position:relative;width:100%;height:678px;padding:32px 0 35px 0;background:#2c2a29;}
+#wrap #footer {z-index:1;position:relative;width:100%;height:488px;padding:32px 0 35px 0;background:#2c2a29;}
