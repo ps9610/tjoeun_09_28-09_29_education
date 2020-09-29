@@ -10,7 +10,32 @@
 #wrap {position:relative;z-index:1;}
 
 /* header */
-#wrap #header {position:fixed;z-index:3;width:100%;height:120px;background:#f6f5ef;}
+#wrap #header {position:fixed;z-index:3;width:100%;height:120px;background:#f6f5ef;border-top:2px solid #111;border-bottom:1px solid #e5e5e5;}
+#wrap #header .wrap {width:1100px;height:120px;margin:0 auto;}
+
+/* logo */
+#wrap #header .wrap .logo {float:left;width:75px;height:120px;padding:22.5px 0 22.5px 0;}
+#wrap #header .wrap .logo > h1 {width:75px;}
+#wrap #header .wrap .logo > h1 > a {width:75px;height:75px;}
+#wrap #header .wrap .logo > h1 > a > img {display:block;}
+
+/* nav */
+#wrap #header .wrap .nav {float:left;width:1025px;height:120px;}
+
+/* side-menu */
+#wrap #header .wrap .nav #aside {width:1025px;height:54px;text-align:right;}
+#wrap #header .wrap .nav #aside > ul {display:inline-block;width:1025px;height:54px;padding-top:7px}
+#wrap #header .wrap .nav #aside > ul > li {display:inline-block;vertical-align:middle;padding-left:26px;}
+#wrap #header .wrap .nav #aside > ul > li:last-child {padding:0 50px 0 15px;}
+#wrap #header .wrap .nav #aside > ul > li > a {display:block;font-size:13px;}
+#wrap #header .wrap .nav #aside > ul > li > a > img {background:#fff;padding:5px;border:1px solid #ccc;border-radius:5px;}
+
+/* main-menu */
+#wrap #header .wrap .nav #nav {width:1025px;height:56px;}
+#wrap #header .wrap .nav #nav > ul {float:right;}
+#wrap #header .wrap .nav #nav > ul > li {float:left;height:56px;}
+#wrap #header .wrap .nav #nav > ul > li > a {display:block;font-size:14px;color:#333;padding:10px 30px 40px 20px;}
+#wrap #header .wrap .nav #nav > ul > li > a:hover {color:#669900;background:#333;}
 
 /* main */
 #wrap #main   {position:relative;z-index:2;width:100%;}
@@ -35,7 +60,7 @@
 #wrap #main #section5 {width:100%;height:573px;background:url(../img/section5.jpg) no-repeat 50% 0;background-size:cover;}
 
 /* section6 */
-#wrap #main #section6 {width:100%;height:400px;background:#f4eed9;}
+#wrap #main #section6 {width:100%;height:400px;background:#f4eed9;} 
 
 /* section7 */
 #wrap #main #section7 {width:100%;height:800px;background:url(../img/section7.jpg) no-repeat 50% 0 fixed;background-size:cover;}
