@@ -1,7 +1,7 @@
-@charset "UTF-8";  /* 스킵-wrap 서로 형제니까 제일 먼저설정 */
+@charset "UTF-8";  /* skip-wrap 서로 형제니까 제일 먼저설정 */
 
 /* 스킵메뉴 */
-#skip {z-index:2;/*스킵하고 wrap하고 두 형제, 중에 제일 위에 보여야되니까 2번*/position:absolute;top:0;left:0;width:100%;font-size:0;} /*지금 헤더가 fixed라, 벽돌처럼쌓아지는 relative가되면 안되고, 앞/뒤가 설정되는 absolute로 해서 겹치게해야됨*/
+#skip {z-index:2;/*skip, wrap 두 형제 중에 제일 위에 보여야되니까 2번*/position:absolute;top:0;left:0;width:100%;font-size:0;} /*지금 헤더가 fixed라, 벽돌처럼쌓아지는 relative가되면 안되고, 앞/뒤가 설정되는 absolute로 해서 겹치게해야됨*/
 #skip > li {width:100%;}
 #skip > li > a {display:block;line-height:0;font-size:0;background:#000;color:#fff;text-align:center;}
 #skip > li > a:focus {line-height:50px;font-size:20px;}
