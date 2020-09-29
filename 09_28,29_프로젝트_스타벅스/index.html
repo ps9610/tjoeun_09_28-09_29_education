@@ -57,7 +57,34 @@
 </ul>
 <div id="wrap"> <!-- 모든 홈페이지 만들 때 전체 틀을 잡아주고 css가서 z-index하는게 제일 첫번째 일 -->
     <header id="header">
-
+        <div class="wrap fixedclear">
+            <div class="left-wrap">
+                <h1><a href="#"class="logo-btn" title="Logo"><img src="./img/logo.png" alt="logo"></a></h1>
+                <!-- 로고는항상h1태그를씀, heading태그는 text가 없으면 비어있는걸로 간주, 이렇게 이미지를 제목으로 쓴 경우는 alt를 안써주면 이미지안뜸
+                     png:배경투명,굉장히선명-svg도 많이 씀 -->
+            </div>
+            <div class="right-wrap">
+                <aside id="aside">
+                    <ul> <!-- 항목이 많을때는 ul, 그렇지 않으면 div -->
+                        <li><a href="#" title="Sign in">Sign In</a></li>
+                        <li><a href="#" title="My Starbucks">My Starbucks</a></li>
+                        <li><a href="#" title="Customer Service & Ideas">Customer Service & Ideas</a></li>
+                        <li><a href="#" title="Find a Store">Find a Store</a></li>
+                        <li><a href="#" title="Seacrch Icon"><img src="./img/icon_magnifier_black.png" alt="Seacrch Icon"></a></li>
+                    </ul> 
+                </aside>
+                <nav id="nav" class="fixedclear">
+                    <ul class="fixedclear">
+                        <li><a href="#" class="main-btn" title="COFFEE">COFFEE</a></li>
+                        <li><a href="#" class="main-btn" title="MENU">MENU</a></li>
+                        <li><a href="#" class="main-btn" title="STORE">STORE</a></li>
+                        <li><a href="#" class="main-btn" title="RESPONSIBILITY">RESPONSIBILITY</a></li>
+                        <li><a href="#" class="main-btn" title="STARBUCKS REWARDS">STARBUCKS REWARDS</a></li>
+                        <li><a href="#" class="main-btn" title="WHAT'S NEW">WHAT'S NEW</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <main id="main">
         <section id="section1">

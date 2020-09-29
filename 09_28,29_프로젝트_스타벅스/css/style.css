@@ -6,11 +6,37 @@
 #skip > li > a {display:block;line-height:0;font-size:0;background:#000;color:#fff;text-align:center;}
 #skip > li > a:focus {line-height:50px;font-size:20px;}
 
+/* 웹문서 전체랩핑 박스블럭 */
 #wrap {z-index:1;position:relative;/*block의 의미*/} /* 포지션 앱솔루트 relative는 꼭 top, left값 들어가야됨 */
+
 /* 헤더영역 */
 #wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:120px;border-top:2px solid #000;border-bottom:1px solid #e5e5e5;background:#f6f5ef;}
+#wrap #header .wrap {width:1100px;height:120px;margin:0 auto;}
 
-/* 웹문서 전체랩핑 박스블럭 */
+/* 로고 */
+#wrap #header .wrap .left-wrap {float:left;width:75px;height:120px;}
+#wrap #header .wrap .left-wrap > h1 {width:75px;height:75px;padding:22.5px 0 22.5px 0;} /* 가운데배치방법 1)padding(위아래정렬할땐 마진보단 패딩) */
+#wrap #header .wrap .left-wrap > h1 > a {display:block;width:75px;height:75px;} /*사실block안해도 되는데 엄격하게 해준거임*/
+#wrap #header .wrap .left-wrap > h1 > a > img {width:100%;} /* 같은라인의 글자없어서 :vertical-align안씀 */
+
+#wrap #header .wrap .right-wrap {float:left;width:1025px;height:120px;}
+/* 사이드메뉴 */
+#wrap #header .wrap .right-wrap #aside {width:100%;height:54px;text-align:right;}
+#wrap #header .wrap .right-wrap #aside > ul {display:inline-block;padding:10px 30px 0 0;} /* ul을 글자단위로 인식시키고 aside에서 text-align을 사용함, 여백은 되도록이며 안쪽에서, 좌우여백은 margin을 많이 씀 */
+#wrap #header .wrap .right-wrap #aside > ul >li {display:inline-block;margin-left:25px;} /*사이사이 공백주고싶어서 inline-block*/
+#wrap #header .wrap .right-wrap #aside > ul >li:last-child {margin-left:15px;}
+#wrap #header .wrap .right-wrap #aside > ul >li > a {font-size:13px;color:#555;font-weight:500;} /*font-weight:100~900까지, 단위는 백단위, 평균 400.*/
+#wrap #header .wrap .right-wrap #aside > ul >li > a:hover {text-decoration:underline;}
+#wrap #header .wrap .right-wrap #aside > ul >li > a > img {vertical-align:middle;background:#fff;border:1px solid #aaa;padding:5px;border-radius:5px;} /* 이미지가운데정렬하는방법 */
+
+/* 메인메뉴 */
+#wrap #header .wrap .right-wrap #nav {width:100%;height:66px;}
+#wrap #header .wrap .right-wrap #nav > ul {float:right;}
+#wrap #header .wrap .right-wrap #nav > ul > li {float:left;} /*사이사이 공백주기 싫어서 float*/
+#wrap #header .wrap .right-wrap #nav > ul > li > a {display:block;padding:10px 20px 40px 20px;/*글씨가 정중앙에 있는게 아니라서 line-height안쓰고 padding 줌*/font-size:14px;color:#444;}
+#wrap #header .wrap .right-wrap #nav > ul > li > a:hover {text-decoration:underline;color:#669900;background:#2c2a29;}
+
+
 
 /*메인영역*/
 #wrap #main {z-index:2;position:relative;margin-top:123px;}
